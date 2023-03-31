@@ -31,4 +31,10 @@ public class AreasController {
         return areasService.listarArea();
     }
 
+    @DeleteMapping
+    public void eliminarArea(@PathVariable("id")Integer id){
+        areasService.eliminarArea(id);
+    }
+
+
 }

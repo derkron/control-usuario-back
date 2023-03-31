@@ -22,7 +22,7 @@ public class Areas {
 
     private Integer codeArea;
 
-    @Column(length =50 )
+
     private String nameArea;
 
 

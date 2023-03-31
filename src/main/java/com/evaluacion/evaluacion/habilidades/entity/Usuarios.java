@@ -30,7 +30,6 @@ public class Usuarios {
     @Column(length =50 )
     private String email;
 
-    @Column(length =10 )
     private Integer documentNumber;
 
     @Column(length =10 )
