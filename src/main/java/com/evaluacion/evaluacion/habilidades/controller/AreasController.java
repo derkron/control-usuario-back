@@ -12,11 +12,15 @@ import java.util.List;
 public class AreasController {
 
     @Autowired
-    AreasService areasService;
+    private AreasService areasService;
 
     @PostMapping
     public Areas crearArea(@RequestBody Areas areas){
         return areasService.crearArea(areas);
+    }
+    @GetMapping
+    public List<Areas> traerAreas(){
+        return areasService.traerAreas();
     }
 
     @PutMapping(path = {"/{id}"})
@@ -26,9 +30,10 @@ public class AreasController {
 
     }
 
-    @GetMapping
-    public List<Areas> listarArea(){
-        return areasService.listarArea();
+
+    @GetMapping(path = {"/{id}"})
+    public Areas verArea(@PathVariable("id")Integer id){
+        return areasService.verArea(id);
     }
 
     @DeleteMapping

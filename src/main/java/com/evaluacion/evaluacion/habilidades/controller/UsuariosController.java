@@ -26,7 +26,7 @@ public class UsuariosController {
     }
 
     @GetMapping
-    public List<Usuarios>listarUser(){
+    public List<Usuarios> listarUser(){
         return usuariosService.listarUsuario();
     }
 

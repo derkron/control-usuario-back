@@ -14,10 +14,13 @@ public class AreasService {
     @Autowired
     AreasRepository areasRepository;
 
-    public Areas crearArea(Areas nArea){
-        return areasRepository.save(nArea);
+    public Areas crearArea(Areas area){
+        area.setStateArea("activo");
+        return areasRepository.save(area);
     }
-    public List<Areas> listarArea(){
+
+
+    public List<Areas> traerAreas() {
         return areasRepository.findAll();
     }
 
@@ -31,5 +34,9 @@ public class AreasService {
 
     public void eliminarArea(Integer id){
         areasRepository.deleteById(id);
+    }
+
+    public Areas verArea(Integer id){
+        return areasRepository.findById(id).get();
     }
 }

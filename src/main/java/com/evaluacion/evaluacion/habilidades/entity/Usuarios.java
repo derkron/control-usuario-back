@@ -30,7 +30,7 @@ public class Usuarios {
     @Column(length =50 )
     private String email;
 
-    private Integer documentNumber;
+    private String documentNumber;
 
     @Column(length =10 )
     private Float salary;
@@ -39,7 +39,7 @@ public class Usuarios {
     private String position;
 
     @Column(name = "stateUsuario")
-    private  int state;
+    private  String state;
 
     @ManyToOne
     @JoinColumn(name = "areaId")
